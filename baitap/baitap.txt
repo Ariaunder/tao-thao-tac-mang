@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>m?ng</title>
+</head>
+<body>
+<input type="text" id="valueText">
+<button onclick="myAdd()">Add</button>
+<button onclick="myDisplay()">Display</button>
+<div id="result"></div>
+<script>
+    let x = 0;
+    let array = Array();
+
+    function myAdd() {
+        array[x] = document.getElementById('valueText').value;
+        alert('Thêm ' + array[x] + ' vào m?ng');
+        x++;
+        document.getElementById('valueText').value = '';
+    }
+
+    function myDisplay() {
+        let e = '<br>';
+        for (let i = 0; i < array.length; i++) {
+            e += ('Giá tr? th? ' + (i + 1) + ' c?a m?ng là: ' + array[i] + '<br>');
+        }
+        document.getElementById('result').innerHTML = e;
+    }
+</script>
+</body>
+</html>
